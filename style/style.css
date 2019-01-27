@@ -1,0 +1,201 @@
+html, body{
+    		background-color: #000000;
+            margin:0;
+            padding: 0;
+    	}
+    	.conteiner{
+    		max-width: 60%;
+    		margin: auto;
+            padding-bottom: 100px; 
+    	}
+    	.wrapper{
+    		max-width: 100%;
+    		margin: auto;
+    	}
+          .footer {
+            position: fixed; 
+            left: 0; bottom: 0; 
+            color: #fff; 
+            width: 100%; 
+        }
+           .footer div {
+            text-align: center;
+            padding: 10px; 
+            background: rgba(114, 114, 114, 0.5)
+        }
+    	.text{
+    		color: #ffffff;
+    		text-align: center;
+    		padding-bottom: 50px;
+    	}
+    	#img_logo_main{
+    		max-width: 100%;
+    		max-height: 100%;
+    	}
+    	
+    	.cardsite {
+    		width: 30%;
+			display: inline-block;
+			padding-right: 1%;
+        }
+        .img_news{
+             border-radius: 200px; /* Радиус скругления */
+             box-shadow: 0 0 7px #666; /* Параметры тени */
+             max-width: 80%;
+             margin-bottom:10px;
+        }  
+        .checkbox {
+            max-width: 30%;
+            display: inline-block;
+        }
+        
+        .checkbox label{
+          display:block;
+          cursor:pointer;
+          position:relative;
+        }
+        .checkbox label:before{
+          content:"";
+          display:block;
+          width:20%;
+          height:25%;
+          top:15%;
+          margin:auto;
+          position:absolute;
+          left:0;
+          right:0;
+          background-color:transparent;
+          border-radius:50px;
+        }
+        .checkbox label:after{
+          content:"";
+          display:block;
+          width:5%;
+          height:2%;
+          top:25%;
+          margin:auto;
+          position:absolute;
+          left:0;
+          right:0;
+          border-left:5px solid transparent;
+          border-bottom:5px solid transparent;
+          transform:rotate(-45deg);
+        }
+        .checkbox input[type=checkbox]{
+          display:none;
+        }
+        .checkbox input[type=checkbox]:checked + label:before{
+          background-color:#8dc3ff;
+        }
+        .checkbox input[type=checkbox]:checked + label:after{
+          border-color:#fff;
+        }
+        .view{
+            background-color: #F4F4F4;
+            margin: 0;
+        }
+        .conteinerview{
+            width: 70%;
+            margin: auto; 
+            background-color: #ffffff;
+            padding-top: 50px;
+        }
+        .wrapperview{
+            width: 100%;
+            height: 70px;
+            background-color: #000000;
+            position: fixed;
+        }
+        #title a{
+             text-decoration: none;
+             color: #000000;
+             font-family: 'Open Sans', arial, sans-serif;
+             color: #222222;
+             font-weight: 400;
+             font-size: 24px;
+        }
+        #title a:hover{
+            color: #5D97B0;
+        }
+        .list_news{
+            width: 100%;
+            margin: auto;
+        }
+        #img_logo{
+            width: auto;
+            height: 60px;
+        }
+        .logo{
+            padding: 5px 20px;
+        }
+        .post{
+            width: 80%;
+            margin: auto;
+        }
+        .pic_news{
+            max-width: 50%;
+            max-height: 50%;
+        }
+    @media only screen and (max-width: 450px) {
+        .pic_news .pic_news_fon {
+            max-width: 100%;
+            max-height: 100%;
+         }
+         .news{
+          max-width: 100%;
+          padding: auto;
+         }
+               .img_news{
+             border-radius: 50%;
+             max-width: 50%;
+             margin-bottom:10px;
+             margin-left: 25%;
+        }
+        .checkbox label:before{
+          width:15%;
+          height:25%;
+          top:30%;
+        }
+        .checkbox label:after{
+          top:40%;
+        }
+          .checkbox {
+            max-width: 100%;
+            display: inline-block;
+        }
+         .conteinerview{
+            width: 100%;
+        }
+        .conteiner{
+            max-width: 100%;
+        }
+    }
+    .pic_news_fon{
+    display: inline-block;
+    width: 20%;
+    min-height: 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+
+
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
