@@ -24,12 +24,12 @@
 	    			<img src="images/habra.png" class="img_news">
 	    			</label>
 	    		</div>	
-	    		<!--<div class="checkbox" >
+	    		<div class="checkbox" >
 	    			<input id="checkbox2" type="checkbox" name="news[]" value="2">
 						<label for="checkbox2">
 	    			<img src="images/horror.png" class="img_news">
 	    			</label>
-	    		</div>!-->
+	    		</div>!
 	    		<div class="checkbox" >
 	    			<input id="checkbox3" type="checkbox" name="news[]" value="3">
 						<label for="checkbox3">
@@ -49,7 +49,13 @@
 						<label for="checkbox5">
 	    			<img src="images/newsru.png" class="img_news">
 	    			</label>
-	    		</div>		
+	    		</div>	
+	    		<div class="checkbox" >
+	    			<input id="checkbox6" type="checkbox" name="news[]" value="6">
+						<label for="checkbox6">
+	    			<img src="images/yandex.png" class="img_news">
+	    			</label>
+	    		</div>	
     		</div>
 
     	

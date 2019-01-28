@@ -1,5 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device=width, initial-scale=1">
+	<link rel="stylesheet" href="style/style.css" type="text/css"/>
+	<title>НОВОСТИ</title>
+</head>
 <?php
-header('Content-type:text/html; charset=utf-8');
 require 'phpQuery.php';
 
  function IsChecked($chkname,$value)
@@ -60,11 +67,7 @@ require 'phpQuery.php';
 		 }
  }}
 ?>
-	<meta name="viewport" content="width=device=width">
-<link rel="stylesheet" href="style/style.css" type="text/css"/>
-		<title>Новости</title>
 	<body class="view">
-
 		<div class="wrapperview">
 			<div class="logo">
 				<a href="/index.php"><img src="/images/_logo.png" id="img_logo"></a>
@@ -96,9 +99,9 @@ require 'phpQuery.php';
 			$url='http://horrorzone.ru/category/movie-news';
 			$newsview='.content-wrap .';
 			$im='img';
-			$tit='.title a';
+			$tit='h3';
 			$tim='';
-			$a_href='.title a';
+			$a_href='';
 			$attr_img='data-src';
 			$attr_a='';
 			$site_name='horror';
@@ -151,7 +154,23 @@ require 'phpQuery.php';
 			NewsView($url,$newsview,$im,$tit,$tim,$a_href,$attr_img,$attr_a,$site_name);
 		}
 
+			if(IsChecked('news','6'))
+		{
+			$url='https://news.yandex.ru/world.html';
+			$newsview='.page-content__fixed .story';
+			$im='.story__image-container img';
+			$tit='h2';
+			$tim='';
+			$a_href='';
+			$attr_img='src';
+			$attr_a='';
+			$site_name='';
+
+			NewsView($url,$newsview,$im,$tit,$tim,$a_href,$attr_img,$attr_a,$site_name);
+		}
+
 		?>
 </div></div>
 </div>
 </body>
+</html>
