@@ -33,20 +33,22 @@ require 'phpQuery.php';
 			$img=$article->find($im)->attr($attr_img);
 			$title=$article->find($tit)->html();
 			$time=$article->find($tim)->html();
-			if($attr != ''){
+			if($attr_a != ''){
 			$a=$article->find($a_href)->attr($attr_a);	
 			}
 			else{
 			$a=$article->find($a_href)->html();
 			}
 
-			if($site_name='newsru')
-			{
-				if (strpos($a, 'https') == 0) { 
+			if(($site_name =='newsru') and (strpos($a, 'https') == 0)) { 
 					$a='https://www.newsru.com/'.$a;
-				}}
+				}
+
+			if(($site_name =='yandex') and (strpos($a, 'https') == 0)) { 
+					$a='https://news.yandex.ru'.$a;
+				}
 			
-			if($attr !=''){
+			if($attr_a !=''){
 				echo "<hr><h3 id='title'><a href='$a'>".($title)."</a></h3><br>";	}
 				else{
 			 	echo '<hr><h3 id="title">'.($title).'</h3><br>';
@@ -128,7 +130,7 @@ require 'phpQuery.php';
 		{
 			$url='https://kostroma.today/';
 			$newsview='.news-line .item-news';
-			$im='.content-post div';
+			$im='.news-meain-trumb div';
 			$tit='h3';
 			$tim='span';
 			$a_href='a';
@@ -161,10 +163,10 @@ require 'phpQuery.php';
 			$im='.story__image-container img';
 			$tit='h2';
 			$tim='';
-			$a_href='';
+			$a_href='a';
 			$attr_img='src';
-			$attr_a='';
-			$site_name='';
+			$attr_a='href';
+			$site_name='yandex';
 
 			NewsView($url,$newsview,$im,$tit,$tim,$a_href,$attr_img,$attr_a,$site_name);
 		}
