@@ -1,86 +1,111 @@
 html, body{
-    		background-color: #000000;
-            margin:0;
-            padding: 0;
-    	}
-    	.conteiner{
-    		max-width: 60%;
-    		margin: auto;
-            padding-bottom: 100px; 
-    	}
-    	.wrapper{
-    		max-width: 100%;
-    		margin: auto;
-    	}
-          .footer {
-            position: fixed; 
-            left: 0; bottom: 0; 
-            color: #fff; 
-            width: 100%; 
-        }
-           .footer div {
-            text-align: center;
-            padding: 10px; 
-            background: rgba(114, 114, 114, 0.5)
-        }
-    	.text{
-    		color: #ffffff;
-    		text-align: center;
-    		padding-bottom: 50px;
-    	}
-    	#img_logo_main{
-    		max-width: 100%;
-    		max-height: 100%;
-    	}
-    	
-    	.cardsite {
-    		width: 30%;
-			display: inline-block;
-			padding-right: 1%;
-        }
-        .img_news{
-             border-radius: 200px; /* Радиус скругления */
-             box-shadow: 0 0 7px #666; /* Параметры тени */
-             max-width: 80%;
-             margin-bottom:10px;
-        }  
-        .checkbox {
-            max-width: 30%;
-            display: inline-block;
-        }
-        
-        .checkbox label{
-          display:block;
-          cursor:pointer;
-          position:relative;
-        }
-        .checkbox label:before{
-          content:"";
-          display:block;
-          width:20%;
-          height:25%;
-          top:15%;
-          margin:auto;
-          position:absolute;
-          left:0;
-          right:0;
-          background-color:transparent;
-          border-radius:50px;
-        }
-        .checkbox label:after{
-          content:"";
-          display:block;
-          width:5%;
-          height:2%;
-          top:25%;
-          margin:auto;
-          position:absolute;
-          left:0;
-          right:0;
-          border-left:5px solid transparent;
-          border-bottom:5px solid transparent;
-          transform:rotate(-45deg);
-        }
+  background-color: #000000;
+  margin:0;
+  padding: 0;
+}
+.preloader{
+  position: fixed;
+  background-color: #000000;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+.preloader > div{
+  position: relative;
+  left: 50%;
+  top:50%;
+  margin: -100px 0 0 -100px;
+}
+.conteiner{
+  max-width: 60%;
+  margin: auto;
+  padding-bottom: 100px; 
+}
+.wrapper{
+  max-width: 70%;
+  margin: auto;
+}
+
+.submit{
+  position: fixed; 
+  left: 0; 
+  bottom: 0; 
+  color: #fff; 
+  width: 100%; 
+  text-align: center;
+  padding: 20px; 
+  border:none;
+  cursor: pointer;
+}
+#footer{
+  background: rgba(114, 114, 114, 0.5);
+}
+#hide{
+    background: rgba(0, 22, 166, 0.5);
+}
+.text{
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 50px;
+}
+#img_logo_main{
+  max-width: 100%;
+  max-height: 100%;
+}
+.cardsite {
+  width: 30%;
+	display: inline-block;
+	padding-right: 1%;
+}
+.img_news{
+  border-radius: 200px; 
+  box-shadow: 0 0 7px #666; 
+  max-width: 80%;
+  margin-bottom:10px;
+}
+.news{
+  max-width: 70%;
+  margin: auto;
+  padding-left: 10%;
+}  
+.checkbox {
+  max-width: 30%;
+  display: inline-block;
+}       
+.checkbox label{
+  display:block;
+  cursor:pointer;
+  position:relative;
+}
+.checkbox label:before{
+  content:"";
+  display:block;
+  width:20%;
+  height:25%;
+  top:15%;
+  margin:auto;
+  position:absolute;
+  left:0;
+  right:0;
+  background-color:transparent;
+  border-radius:50px;
+}
+.checkbox label:after{
+  content:"";
+  display:block;
+  width:5%;
+  height:2%;
+  top:25%;
+  margin:auto;
+  position:absolute;
+  left:0;
+  right:0;
+  border-left:5px solid transparent;
+  border-bottom:5px solid transparent;
+  transform:rotate(-45deg);
+}
         .checkbox input[type=checkbox]{
           display:none;
         }
@@ -136,21 +161,30 @@ html, body{
             max-width: 50%;
             max-height: 50%;
         }
+            .pic_news_fon{
+    display: inline-block;
+    width: 20%;
+    min-height: 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
     @media only screen and (max-width: 450px) {
         .pic_news .pic_news_fon {
             max-width: 100%;
             max-height: 100%;
          }
-         .news{
-          max-width: 100%;
-          padding: auto;
-         }
+
                .img_news{
              border-radius: 50%;
              max-width: 50%;
              margin-bottom:10px;
              margin-left: 25%;
         }
+                 .news{
+          max-width: 100%;
+          padding: auto;
+         }
         .checkbox label:before{
           width:15%;
           height:25%;
@@ -170,32 +204,4 @@ html, body{
             max-width: 100%;
         }
     }
-    .pic_news_fon{
-    display: inline-block;
-    width: 20%;
-    min-height: 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    }
 
-
-input[type=text] {
-    padding:5px; 
-    border:2px solid #ccc; 
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-}
-
-input[type=text]:focus {
-    border-color:#333;
-}
-
-input[type=submit] {
-    padding:5px 15px; 
-    background:#ccc; 
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
-}
